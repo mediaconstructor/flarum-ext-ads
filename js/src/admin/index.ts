@@ -16,5 +16,14 @@ app.initializers.add('davwheat/ads', () => {
         allowGuest: true,
       },
       'view'
+    )
+    .registerPermission(
+      {
+        icon: 'fas fa-ad',
+        permission: 'davwheat-ads.view-ads',
+        label: app.translator.trans('davwheat.ads.admin.permissions.viewAds'),
+        allowGuest: true,
+      },
+      'view'
     );
 });

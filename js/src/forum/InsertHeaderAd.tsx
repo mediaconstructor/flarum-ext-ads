@@ -8,6 +8,7 @@ import type * as Mithril from 'mithril';
 import RefreshAds from './RefreshAds';
 import safelyEvalAdScript from './safelyEvalAdScript';
 import areAdsBypassed from './areAdsBypassed';
+import areAdsShown from './areAdsShown';
 
 export default function InsertHeaderAd() {
   const AdCode = app.data['davwheat-ads.ad-code.header'] as string;
@@ -16,7 +17,9 @@ export default function InsertHeaderAd() {
   const Html = m.trust(AdCode) as ReturnType<Mithril.Static['trust']>;
 
   override(IndexPage.prototype, 'hero', function (originalHero: () => Mithril.Children): Mithril.Children {
-    if (areAdsBypassed()) return originalHero();
+    if (areAdsBypassed() && !areAdsShown()) console.log(app.forum.attribute);
+    if (areAdsBypassed() && !areAdsShown()) return originalHero();
+    console.log('Hier wird angezeigt.');
 
     return (
       <>
@@ -29,7 +32,7 @@ export default function InsertHeaderAd() {
   });
 
   extend(IndexPage.prototype, ['oncreate', 'onupdate'], function (this: IndexPage, returned: any) {
-    if (areAdsBypassed()) return;
+    if (areAdsBypassed() && !areAdsShown()) return;
 
     RefreshAds();
     safelyEvalAdScript('header', Script);

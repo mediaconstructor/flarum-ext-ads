@@ -30,7 +30,7 @@ class ForumDocumentContent
     {
         $actor = RequestUtil::getActor($request);
 
-        if ($actor->can('davwheat-ads.bypass-ads')) {
+        if ($actor->can('davwheat-ads.bypass-ads') && !$actor->can('davwheat-ads.view-ads')) {
             // Don't add ad code to the frontend page content
             return;
         }

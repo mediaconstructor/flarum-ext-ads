@@ -14,6 +14,7 @@ import type * as Mithril from 'mithril';
 import RefreshAds from './RefreshAds';
 import safelyEvalAdScript from './safelyEvalAdScript';
 import areAdsBypassed from './areAdsBypassed';
+import areAdsShown from './areAdsShown';
 
 export default function InsertDiscussionPageHeaderAd() {
   const AdCode = app.data['davwheat-ads.ad-code.discussion_header'] as string;
@@ -22,7 +23,7 @@ export default function InsertDiscussionPageHeaderAd() {
   const Html = m.trust(AdCode) as ReturnType<Mithril.Static['trust']>;
 
   override(DiscussionPage.prototype, 'view', function (this: DiscussionPage, originalFunc: () => Mithril.Children): Mithril.Children {
-    if (areAdsBypassed()) return originalFunc();
+    if (areAdsBypassed() && !areAdsShown()) return originalFunc();
 
     const discussion = this.discussion;
 
@@ -59,7 +60,7 @@ export default function InsertDiscussionPageHeaderAd() {
   });
 
   extend(DiscussionPage.prototype, ['oncreate', 'onupdate'], function (this: DiscussionHero, returned: any) {
-    if (areAdsBypassed()) return;
+    if (areAdsBypassed() && !areAdsShown()) return;
 
     RefreshAds();
     safelyEvalAdScript('discussion page header', Script);

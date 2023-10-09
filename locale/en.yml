@@ -5,6 +5,7 @@ davwheat:
     admin:
       permissions:
         bypassAds: Hide advertisements from the forum
+        viewAds: Show advertisments for selected groups
 
       settings:
         admin_bypass_warning: |

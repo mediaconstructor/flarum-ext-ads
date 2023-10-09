@@ -4,6 +4,12 @@
 
 A [Flarum](http://flarum.org) extension that provides ad unit support for your Flarum forum.
 
+
+## ⚠️ Fork 🧑‍🌾
+
+This is a fork of the [original extension by David Wheatley](https://github.com/davwheat/flarum-ext-ads) with some 
+very special changes required for a customer. This fork is not intended for public usage.
+
 ## Special thanks
 
 Thank you to @"alphadot"#36731 and @"MikeJones"#17198 for sponsoring this extension! 🥰 
@@ -13,13 +19,13 @@ Thank you to @"alphadot"#36731 and @"MikeJones"#17198 for sponsoring this extens
 Install with composer:
 
 ```sh
-composer require davwheat/flarum-ext-ads:"*"
+composer require mediaconstructor/flarum-ext-ads:"*"
 ```
 
 ## Updating
 
 ```sh
-composer update davwheat/flarum-ext-ads:"*"
+composer update mediaconstructor/flarum-ext-ads:"*"
 php flarum migrate
 php flarum cache:clear
 ```

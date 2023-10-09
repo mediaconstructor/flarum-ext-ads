@@ -1,5 +1,5 @@
 {
-    "name": "davwheat/flarum-ext-ads",
+    "name": "mediaconstructor/flarum-ext-ads",
     "description": "Ads support for your Flarum forum.",
     "keywords": [
         "flarum",
@@ -13,11 +13,8 @@
         "flarum/core": "^1.2.0"
     },
     "authors": [
-        {
-            "name": "David Wheatley",
-            "email": "hi@davwheat.dev",
-            "role": "Developer"
-        }
+        {"name": "David Wheatley", "email": "hi@davwheat.dev", "role": "Developer"},
+        {"name": "Dominik Grothaus", "email": "dg@mc-kg.de", "role": "Developer"}
     ],
     "autoload": {
         "psr-4": {

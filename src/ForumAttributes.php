@@ -18,6 +18,7 @@ class ForumAttributes
         $actor = $serializer->getActor();
 
         $attributes['canBypassAds'] = $actor->can('davwheat-ads.bypass-ads');
+        $attributes['canViewAds'] = $actor->can('davwheat-ads.view-ads');
 
         return $attributes;
     }

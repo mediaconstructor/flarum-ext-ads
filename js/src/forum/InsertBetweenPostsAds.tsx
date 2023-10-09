@@ -6,6 +6,7 @@ import RefreshAds from './RefreshAds';
 import PostStream from 'flarum/forum/components/PostStream';
 import safelyEvalAdScript from './safelyEvalAdScript';
 import areAdsBypassed from './areAdsBypassed';
+import areAdsShown from './areAdsShown';
 
 import type Mithril from 'mithril';
 
@@ -16,7 +17,7 @@ export default function InsertBetweenPostsAds() {
   const Html = m.trust(AdCode) as ReturnType<Mithril.Static['trust']>;
 
   override(PostStream.prototype, 'view', function (originalView: () => Mithril.Vnode<any, any>): Mithril.Children {
-    if (areAdsBypassed()) return originalView();
+    if (areAdsBypassed() && !areAdsShown()) return originalView();
 
     const items = originalView().children as Mithril.Children[];
 
@@ -46,7 +47,7 @@ export default function InsertBetweenPostsAds() {
   });
 
   extend(PostStream.prototype, ['onupdate', 'oncreate'], (originalReturnVal: any) => {
-    if (areAdsBypassed()) return;
+    if (areAdsBypassed() && !areAdsShown()) return;
 
     RefreshAds();
     safelyEvalAdScript('between posts', Script);

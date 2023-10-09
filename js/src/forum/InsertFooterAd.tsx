@@ -1,11 +1,12 @@
 import app from 'flarum/forum/app';
 import areAdsBypassed from './areAdsBypassed';
+import areAdsShown from './areAdsShown';
 import RefreshAds from './RefreshAds';
 import safelyEvalAdScript from './safelyEvalAdScript';
 
 export default function InsertFooterAd() {
   setTimeout(() => {
-    if (areAdsBypassed()) return;
+    if (areAdsBypassed() && !areAdsShown()) return;
 
     const AdCode = app.data['davwheat-ads.ad-code.footer'] as string;
     const Script = app.data['davwheat-ads.ad-code.footer.js'] as string;
