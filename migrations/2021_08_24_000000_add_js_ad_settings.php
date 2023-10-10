@@ -12,10 +12,10 @@
 use Flarum\Database\Migration;
 
 return Migration::addSettings([
-    'davwheat-ads.ad-code.header.js' => '',
-    'davwheat-ads.ad-code.discussion_sidebar.js' => '',
-    'davwheat-ads.ad-code.between_posts.js' => '',
-    'davwheat-ads.ad-code.footer.js' => '',
-    'davwheat-ads.ad-code.discussion_header.js' => '',
-    'davwheat-ads.ad-code.sidebar.js' => '',
+    'mediaconstructor-ads.ad-code.header.js' => '',
+    'mediaconstructor-ads.ad-code.discussion_sidebar.js' => '',
+    'mediaconstructor-ads.ad-code.between_posts.js' => '',
+    'mediaconstructor-ads.ad-code.footer.js' => '',
+    'mediaconstructor-ads.ad-code.discussion_header.js' => '',
+    'mediaconstructor-ads.ad-code.sidebar.js' => '',
 ]);

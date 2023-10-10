@@ -4,15 +4,15 @@ import SettingsPage from './components/SettingsPage';
 
 import type { CustomExtensionPage } from 'flarum/admin/utils/ExtensionData';
 
-app.initializers.add('davwheat/ads', () => {
+app.initializers.add('mediaconstructor/ads', () => {
   app.extensionData
-    .for('davwheat-ads')
+    .for('mediaconstructor-ads')
     .registerPage(SettingsPage as unknown as CustomExtensionPage)
     .registerPermission(
       {
         icon: 'fas fa-shield-alt',
-        permission: 'davwheat-ads.bypass-ads',
-        label: app.translator.trans('davwheat.ads.admin.permissions.bypassAds'),
+        permission: 'mediaconstructor-ads.bypass-ads',
+        label: app.translator.trans('mediaconstructor.ads.admin.permissions.bypassAds'),
         allowGuest: true,
       },
       'view'
@@ -20,8 +20,8 @@ app.initializers.add('davwheat/ads', () => {
     .registerPermission(
       {
         icon: 'fas fa-ad',
-        permission: 'davwheat-ads.view-ads',
-        label: app.translator.trans('davwheat.ads.admin.permissions.viewAds'),
+        permission: 'mediaconstructor-ads.view-ads',
+        label: app.translator.trans('mediaconstructor.ads.admin.permissions.viewAds'),
         allowGuest: true,
       },
       'view'

@@ -12,5 +12,5 @@
 use Flarum\Database\Migration;
 
 return Migration::addSettings([
-    'davwheat-ads.enable-ad-after-placeholder' => 0,
+    'mediaconstructor-ads.enable-ad-after-placeholder' => 0,
 ]);

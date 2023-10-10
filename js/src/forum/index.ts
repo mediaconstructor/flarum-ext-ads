@@ -8,8 +8,8 @@ import InsertFooterAd from './InsertFooterAd';
 import InsertHeaderAd from './InsertHeaderAd';
 import InsertSidebarAd from './InsertSidebarAd';
 
-app.initializers.add('davwheat/ads', () => {
-  const enabledSlots: AdUnitLocations[] = JSON.parse(app.data['davwheat-ads.enabled-ad-locations']);
+app.initializers.add('mediaconstructor/ads', () => {
+  const enabledSlots: AdUnitLocations[] = JSON.parse(app.data['mediaconstructor-ads.enabled-ad-locations']);
 
   if (enabledSlots.includes('header')) {
     InsertHeaderAd();

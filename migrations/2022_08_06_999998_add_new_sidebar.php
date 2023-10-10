@@ -12,5 +12,5 @@
 use Flarum\Database\Migration;
 
 return Migration::addSettings([
-    'davwheat-ads.ad-code.sidebar' => '',
+    'mediaconstructor-ads.ad-code.sidebar' => '',
 ]);

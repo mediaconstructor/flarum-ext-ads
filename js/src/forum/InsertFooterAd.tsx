@@ -8,11 +8,11 @@ export default function InsertFooterAd() {
   setTimeout(() => {
     if (areAdsBypassed() && !areAdsShown()) return;
 
-    const AdCode = app.data['davwheat-ads.ad-code.footer'] as string;
-    const Script = app.data['davwheat-ads.ad-code.footer.js'] as string;
+    const AdCode = app.data['mediaconstructor-ads.ad-code.footer'] as string;
+    const Script = app.data['mediaconstructor-ads.ad-code.footer.js'] as string;
 
     const footer = document.createElement('footer');
-    footer.className = 'davwheat-ad davwheat-ad-footer';
+    footer.className = 'mediaconstructor-ad mediaconstructor-ad-footer';
     footer.setAttribute('align', 'center');
 
     document.querySelector('.App-content')!.append(footer);

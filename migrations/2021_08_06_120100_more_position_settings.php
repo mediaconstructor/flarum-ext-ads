@@ -12,5 +12,5 @@
 use Flarum\Database\Migration;
 
 return Migration::addSettings([
-    'davwheat-ads.ad-code.discussion_header' => '',
+    'mediaconstructor-ads.ad-code.discussion_header' => '',
 ]);

@@ -14,8 +14,8 @@ import areAdsShown from './areAdsShown';
 export default function InsertSidebarAd() {
   const root = document.querySelector(':root') as HTMLHtmlElement;
 
-  const AdCode = app.data['davwheat-ads.ad-code.sidebar'] as string;
-  const Script = app.data['davwheat-ads.ad-code.sidebar.js'] as string;
+  const AdCode = app.data['mediaconstructor-ads.ad-code.sidebar'] as string;
+  const Script = app.data['mediaconstructor-ads.ad-code.sidebar.js'] as string;
 
   const Html = m.trust(AdCode) as ReturnType<Mithril.Static['trust']>;
 
@@ -24,7 +24,7 @@ export default function InsertSidebarAd() {
 
     // Only show sidebar ad on desktop and tablet
     if (['desktop-hd', 'desktop', 'tablet'].includes(getComputedStyle(root).getPropertyValue('--flarum-screen'))) {
-      items.add('davwheat-ads', <div class="davwheat-ad davwheat-ad-sidebar">{Html}</div>, -1000);
+      items.add('mediaconstructor-ads', <div class="mediaconstructor-ad mediaconstructor-ad-sidebar">{Html}</div>, -1000);
     }
   });
 

@@ -15,19 +15,19 @@ import areAdsShown from './areAdsShown';
 export default function InsertDiscussionSidebarAd() {
   const root = document.querySelector(':root') as HTMLHtmlElement;
 
-  const AdCode = app.data['davwheat-ads.ad-code.discussion_sidebar'] as string;
-  const Script = app.data['davwheat-ads.ad-code.discussion_sidebar.js'] as string;
+  const AdCode = app.data['mediaconstructor-ads.ad-code.discussion_sidebar'] as string;
+  const Script = app.data['mediaconstructor-ads.ad-code.discussion_sidebar.js'] as string;
 
   const Html = m.trust(AdCode) as ReturnType<Mithril.Static['trust']>;
 
-  root.style.setProperty('--davwheat-ads--discussion-sidebar-position', '36px');
+  root.style.setProperty('--mediaconstructor-ads--discussion-sidebar-position', '36px');
 
   extend(DiscussionPage.prototype, 'sidebarItems', function (this: IndexPage, items: ItemList<Mithril.Children>) {
     if (areAdsBypassed() && !areAdsShown()) return;
 
     // Only show sidebar ad on desktop and tablet
     if (['desktop-hd', 'desktop', 'tablet'].includes(getComputedStyle(root).getPropertyValue('--flarum-screen'))) {
-      items.add('davwheat-ads', <div class="davwheat-ad davwheat-ad-discussion-sidebar">{Html}</div>, 1000);
+      items.add('mediaconstructor-ads', <div class="mediaconstructor-ad mediaconstructor-ad-discussion-sidebar">{Html}</div>, 1000);
     }
   });
 

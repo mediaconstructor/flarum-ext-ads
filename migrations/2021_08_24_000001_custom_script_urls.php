@@ -12,5 +12,5 @@
 use Flarum\Database\Migration;
 
 return Migration::addSettings([
-    'davwheat-ads.custom-ad-script-urls' => '[]',
+    'mediaconstructor-ads.custom-ad-script-urls' => '[]',
 ]);

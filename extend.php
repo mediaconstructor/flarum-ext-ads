@@ -31,21 +31,21 @@ return [
         ->attributes(ForumAttributes::class),
 
     (new ExtensionSettings())
-        ->addKey('davwheat-ads.ad-code.between_posts', '')
-        ->addKey('davwheat-ads.ad-code.discussion_header', '')
-        ->addKey('davwheat-ads.ad-code.discussion_sidebar', '')
-        ->addKey('davwheat-ads.ad-code.footer', '')
-        ->addKey('davwheat-ads.ad-code.header', '')
-        ->addKey('davwheat-ads.ad-code.sidebar', '')
+        ->addKey('mediaconstructor-ads.ad-code.between_posts', '')
+        ->addKey('mediaconstructor-ads.ad-code.discussion_header', '')
+        ->addKey('mediaconstructor-ads.ad-code.discussion_sidebar', '')
+        ->addKey('mediaconstructor-ads.ad-code.footer', '')
+        ->addKey('mediaconstructor-ads.ad-code.header', '')
+        ->addKey('mediaconstructor-ads.ad-code.sidebar', '')
 
-        ->addKey('davwheat-ads.ad-code.between_posts.js', '')
-        ->addKey('davwheat-ads.ad-code.discussion_header.js', '')
-        ->addKey('davwheat-ads.ad-code.discussion_sidebar.js', '')
-        ->addKey('davwheat-ads.ad-code.footer.js', '')
-        ->addKey('davwheat-ads.ad-code.header.js', '')
-        ->addKey('davwheat-ads.ad-code.sidebar.js', '')
+        ->addKey('mediaconstructor-ads.ad-code.between_posts.js', '')
+        ->addKey('mediaconstructor-ads.ad-code.discussion_header.js', '')
+        ->addKey('mediaconstructor-ads.ad-code.discussion_sidebar.js', '')
+        ->addKey('mediaconstructor-ads.ad-code.footer.js', '')
+        ->addKey('mediaconstructor-ads.ad-code.header.js', '')
+        ->addKey('mediaconstructor-ads.ad-code.sidebar.js', '')
 
-        ->addKey('davwheat-ads.between-n-posts', 15)
-        ->addKey('davwheat-ads.enable-ad-after-placeholder', 0)
-        ->addKey('davwheat-ads.enabled-ad-locations', '[]')
+        ->addKey('mediaconstructor-ads.between-n-posts', 15)
+        ->addKey('mediaconstructor-ads.enable-ad-after-placeholder', 0)
+        ->addKey('mediaconstructor-ads.enabled-ad-locations', '[]'),
 ];

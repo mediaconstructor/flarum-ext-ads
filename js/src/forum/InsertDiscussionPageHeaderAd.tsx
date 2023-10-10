@@ -17,8 +17,8 @@ import areAdsBypassed from './areAdsBypassed';
 import areAdsShown from './areAdsShown';
 
 export default function InsertDiscussionPageHeaderAd() {
-  const AdCode = app.data['davwheat-ads.ad-code.discussion_header'] as string;
-  const Script = app.data['davwheat-ads.ad-code.discussion_header.js'] as string;
+  const AdCode = app.data['mediaconstructor-ads.ad-code.discussion_header'] as string;
+  const Script = app.data['mediaconstructor-ads.ad-code.discussion_header.js'] as string;
 
   const Html = m.trust(AdCode) as ReturnType<Mithril.Static['trust']>;
 
@@ -39,7 +39,7 @@ export default function InsertDiscussionPageHeaderAd() {
                   <ul>{listItems(this.sidebarItems().toArray())}</ul>
                 </nav>
                 <div className="DiscussionPage-stream">
-                  <div class="davwheat-ad davwheat-ad-discussion-header" align="center">
+                  <div class="mediaconstructor-ad mediaconstructor-ad-discussion-header" align="center">
                     {Html}
                   </div>
 

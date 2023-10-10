@@ -12,5 +12,5 @@
 use Flarum\Database\Migration;
 
 return Migration::addSettings([
-    'davwheat-ads.between-n-posts' => 15,
+    'mediaconstructor-ads.between-n-posts' => 15,
 ]);

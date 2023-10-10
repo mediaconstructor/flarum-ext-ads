@@ -30,12 +30,12 @@ class ForumDocumentContent
     {
         $actor = RequestUtil::getActor($request);
 
-        if ($actor->can('davwheat-ads.bypass-ads') && !$actor->can('davwheat-ads.view-ads')) {
+        if ($actor->can('mediaconstructor-ads.bypass-ads') && !$actor->can('mediaconstructor-ads.view-ads')) {
             // Don't add ad code to the frontend page content
             return;
         }
 
-        $caPubId = $this->settings->get('davwheat-ads.ca-pub-id', '');
+        $caPubId = $this->settings->get('mediaconstructor-ads.ca-pub-id', '');
 
         if ($caPubId !== '') {
             $url = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=$caPubId";
@@ -46,7 +46,7 @@ class ForumDocumentContent
         /**
          * @var array
          */
-        $scripts = json_decode($this->settings->get('davwheat-ads.custom-ad-script-urls', '[]'), true);
+        $scripts = json_decode($this->settings->get('mediaconstructor-ads.custom-ad-script-urls', '[]'), true);
 
         foreach ($scripts as $script) {
             $document->head[] = "<script async src=\"$script\"></script>";
