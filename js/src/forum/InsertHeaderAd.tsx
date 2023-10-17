@@ -19,7 +19,6 @@ export default function InsertHeaderAd() {
   override(IndexPage.prototype, 'hero', function (originalHero: () => Mithril.Children): Mithril.Children {
     if (areAdsBypassed() && !areAdsShown()) console.log(app.forum.attribute);
     if (areAdsBypassed() && !areAdsShown()) return originalHero();
-    console.log('Hier wird angezeigt.');
 
     return (
       <>
