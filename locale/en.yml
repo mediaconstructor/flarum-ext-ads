@@ -6,8 +6,10 @@ mediaconstructor:
       permissions:
         bypassAds: Hide advertisements from the forum
         viewAds: Show advertisments for selected groups
-
+      manager:
+        manager_headline: Ad management
       settings:
+        settings_headline: Settings
         admin_bypass_warning: |
           Due to the nature of Flarum's permissions system, members of the Admin group will
           not see any ads on the forum. If you wish to test your ads, please visit the forum
