@@ -10,6 +10,9 @@ import { AdUnitLocations, AllAdUnitLocations } from '../../common/AdUnitLocation
 
 import type Mithril from 'mithril';
 
+const translateManager = (key: string, data?: Record<string, unknown>): Mithril.Children =>
+  app.translator.trans(`mediaconstructor.ads.admin.manager.${key}`, data);
+
 const translate = (key: string, data?: Record<string, unknown>): Mithril.Children =>
   app.translator.trans(`mediaconstructor.ads.admin.settings.${key}`, data);
 
@@ -74,7 +77,11 @@ export default class SettingsPage extends ExtensionPage {
 
   content() {
     return (
-      <div class="content">
+      <div class="container">
+        <h1>{translateManager('manager_headline')}</h1>
+        <div class="content"></div>
+        <h1>{translate('settings_headline')}</h1>
+        <div class="content">
         <p style="margin-top: 24px; font-weight: bold; color: red; margin-bottom: 32px;">{translate('admin_bypass_warning')}</p>
 
         <fieldset class="Form-group">
@@ -228,7 +235,6 @@ export default class SettingsPage extends ExtensionPage {
             </fieldset>
           ))}
         </fieldset>
-
         <Button
           onclick={this.customSaveSettings.bind(this)}
           class="Button Button--primary"
@@ -237,6 +243,7 @@ export default class SettingsPage extends ExtensionPage {
         >
           {this.getButtonText()}
         </Button>
+      </div>
       </div>
     );
   }
